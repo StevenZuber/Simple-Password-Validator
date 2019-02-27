@@ -50,5 +50,11 @@ public class PasswordValidatorApplicationTests {
 		assertFalse(this.validator.passwordIsBetween5and12Characters(password));
 	}
 
+	@Test
+	public void passwordBetween5and12CharactersIsValid() {
+		String password = "abcdef123456";
+		assertTrue(this.validator.passwordIsBetween5and12Characters(password));
+	}
+
 
 }

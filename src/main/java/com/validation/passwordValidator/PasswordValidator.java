@@ -16,7 +16,7 @@ public class PasswordValidator {
 
     public boolean passwordIsBetween5and12Characters(String password) {
         System.out.println("PASSWORD LENGTH = " + password.length());
-        if((password.length() < 5) || (password.length() > 12 )) {
+        if((password.length() >= 5) && (password.length() <= 12 )) {
             System.out.println("Password is between 5 and 12 characters");
             return true;
         } else {
