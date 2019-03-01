@@ -16,16 +16,14 @@ public class PasswordValidatorApplication {
 
 		String password;
 
-		System.out.println("\nPlease enter your password for validation.\n");
+		System.out.println("\nPlease enter your password for validation.\n\nEnter as many passwords as you like and enter \"exit\" to exit.\n");
 
+
+		while(true) {
 		password = sc.next();
-
-		//TODO remove this check
-		System.out.println("PASSWORD IS : " + password);
-
-		validator.passwordDoesntContainSpecialCharacters(password);
-		validator.passwordIsBetween5and12Characters(password);
-
+		if (!password.equals("exit"))
+			validator.runAllValidationCases(password);
+		}
 	}
 
 
