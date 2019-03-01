@@ -1,5 +1,6 @@
 # Spring Boot Password Validator 
 This is a sample Java Spring Boot application that allows the user to check various passwords to see if they meet the validation criteria specified in the AC.
+The application gives instructions and feedback on attempted passwords so if a password fails validation, users will know exactly why. 
 
 The acceptance criteria for a password to be valid are: 
 * Must consist of a mixture of lowercase letters and numerical digits only, with at least one of each.
