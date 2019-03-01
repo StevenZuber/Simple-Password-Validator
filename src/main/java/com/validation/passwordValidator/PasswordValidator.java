@@ -2,6 +2,11 @@ package com.validation.passwordValidator;
 
 public class PasswordValidator {
 
+/* Passwords must meet the following Criteria:
+Must consist of a mixture of lowercase letters and numerical digits only, with at least one of each.
+Must be between 5 and 12 characters in length.
+Must not contain any sequence of characters immediately followed by the same sequence.*/
+
     public boolean passwordDoesNotContainSpecialCharacters(String password) {
         if (password.matches("^[a-zA-Z0-9]*\\b$")) {
             System.out.println("Password contains no special characters");
@@ -21,7 +26,7 @@ public class PasswordValidator {
             return false;
         }
     }
-
+// Not necessary per the AC, but I like explicit null checks
     public boolean passwordIsNotEmptyStringOrNull(String password) {
         if (password == null) {
             System.out.println("INVALID: Password cannot be null");
@@ -114,7 +119,3 @@ public class PasswordValidator {
     }
 }
 
-/*
-Must consist of a mixture of lowercase letters and numerical digits only, with at least one of each.
-Must be between 5 and 12 characters in length.
-Must not contain any sequence of characters immediately followed by the same sequence.*/
